@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,15 +9,22 @@
     <label>Numri i pare</label>
     <input type="number" id="nr1">
     <br>
+
     <label>Numri i dyte</label>
     <input type="number" id="nr2">
     <br>
-    <button type="submit" onclick="sum()">+</button>
+
+    <button type="button" onclick="sum()">+</button>
     <p id="result"></p>
-    <button type="submit" onclick="zbritje()">-</button>
-    <button type="submit" onclick="shumezimi()">*</button>
-    <button type="submit" onclick="pjestimi()">/</button>
+
+    <button type="button" onclick="zbritje()">-</button>
     <p id="result1"></p>
+
+    <button type="button" onclick="shumezimi()">*</button>
+    <p id="result2"></p>
+
+    <button type="button" onclick="pjestimi()">/</button>
+    <p id="result3"></p>
 
     <script>
         function sum()
@@ -26,6 +34,7 @@
             var c=a+b;
             document.getElementById('result').innerHTML=c;
         }
+
         function zbritje()
         {
             var a=Number(document.getElementById('nr1').value);
@@ -33,19 +42,21 @@
             var c=a-b;
             document.getElementById('result1').innerHTML=c;
         }
-           function shumezimi()
+
+        function shumezimi()
         {
             var a=Number(document.getElementById('nr1').value);
             var b=Number(document.getElementById('nr2').value);
             var c=a*b;
-            document.getElementById('result1').innerHTML=c;
+            document.getElementById('result2').innerHTML=c;
         }
-           function pjestimi()
+
+        function pjestimi()
         {
             var a=Number(document.getElementById('nr1').value);
             var b=Number(document.getElementById('nr2').value);
             var c=a/b;
-            document.getElementById('result1').innerHTML=c;
+            document.getElementById('result3').innerHTML=c;
         }
     </script>
 </body>
